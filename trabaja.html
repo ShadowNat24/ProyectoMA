@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Trabaja con nosotros</title>
+    <meta charset="UTF-8">
+    <title>Trabaja con nosotros</title>
+    <style>
+        body { font-family: sans-serif; margin: 30px; }
+        .error { color: red; display: none; font-weight: bold; }
+    </style>
 </head>
-
 <body>
 
-<h1>Trabaja con Nosotros</h1>
+    <h1>Trabaja con Nosotros</h1>
+    <p>Si quieres trabajar con nosotros completa el formulario.</p>
 
-<h2>Requisitos</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis non quae delectus veritatis nam ex officia doloremque qui exercitationem iure.</p>
+    <form id="formTrabajo">
+        
+        <label>Email:</label><br>
+        <input type="email" placeholder="Tucorreoelectronico@gmail.com" required><br><br>
 
- <p>Enviar correo con cv a <a href="mailto:trabajaenblanco@gmail.com">trabajaenblanco@gmail.com</a> con el asunto "TRABAJO".</p>
+        <label>Cuéntanos sobre ti:</label><br>
+        <textarea rows="8" cols="50" placeholder="Pon tu nombre y apellido y por qué querrías trabajar en la empresa" required></textarea><br><br>
 
-<a href="index.html">Volver a la página principal</a>
+        <label>Adjuntar currículum (PDF):</label><br>
+        <input type="file" accept=".pdf" required><br><br>
+
+        <input type="checkbox" id="contacto" required>
+        <label for="contacto">Acepto ser contactado por la empresa</label><br><br>
+
+        <p id="mensajeError" class="error">Tienes que completar todos los campos para enviar</p>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <br>
+    <a href="index.html">Volver a la página principal</a>
+
+    <script>
+        const form = document.getElementById('formTrabajo');
+        const mensajeError = document.getElementById('mensajeError');
+
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault(); // Bloquea el envío si está vacío
+                mensajeError.style.display = 'block';
+            } else {
+                mensajeError.style.display = 'none';
+                alert('Formulario enviado con éxito');
+            }
+        });
+
+        // Oculta el error mientras el usuario completa lo que falta
+        form.addEventListener('input', () => {
+            if (form.checkValidity()) {
+                mensajeError.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>
