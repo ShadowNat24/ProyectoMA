@@ -49,6 +49,67 @@
 
 - `<ol>...</ol>`: Seccion de lista ordenada. Por defecto son numeros, pero con el atributo `type` se puede ordenar por letras u otros estilos. Con `start` se puede indicar desde que numero o letra empieza.
 
+## Selectores CSS Usados
+
+- `:root`: Selector para definir variables CSS globales (custom properties).
+
+- `body`: Selector para el elemento body, aplica estilos al cuerpo de la página.
+
+- `nav`: Selector para el elemento nav, estilos para la navegación.
+
+- `nav a`: Selector descendente para enlaces dentro de nav.
+
+- `nav a:hover`: Pseudo-clase para enlaces en nav al pasar el mouse.
+
+- `section`: Selector para elementos section, estilos para secciones de contenido.
+
+## Propiedades CSS Usadas
+
+- `--gris-plata: #c0c0c0;`: Variable para color gris plata.
+- `--gris-claro: #e0e0e0;`: Variable para gris claro.
+- `--gris-medio: #a0a0a0;`: Variable para gris medio.
+- `--gris-oscuro: #808080;`: Variable para gris oscuro.
+- `--amarillo-vial: #eeb906;`: Variable para color amarillo.
+- `--amarillo-claro: #f4e87c;`: Variable para amarillo claro.
+- `--amarillo-oscuro: #d4a306;`: Variable para amarillo oscuro.
+- `--azul-oscuro: #4e5b64;`: Variable para azul oscuro.
+- `--azul-profundo: #47606f;`: Variable para azul profundo.
+- `--azul-medio: #6b7b8c;`: Variable para azul medio.
+- `--azul-claro: #8fa1b3;`: Variable para azul claro.
+- `--blanco-sucio: #f4f4f4;`: Variable para blanco sucio.
+- `--blanco-puro: #ffffff;`: Variable para blanco puro.
+- `--negro: #000000;`: Variable para negro.
+- `--rojo: #ff0000;`: Variable para rojo.
+- `--rojo-claro: #ff6666;`: Variable para rojo claro.
+- `--verde: #00ff00;`: Variable para verde.
+- `--verde-claro: #66ff66;`: Variable para verde claro.
+- `--naranja: #ff8000;`: Variable para naranja.
+- `--naranja-claro: #ffb366;`: Variable para naranja claro.
+- `--morado: #8000ff;`: Variable para morado.
+- `--morado-claro: #b366ff;`: Variable para morado claro.
+- `--fuente-principal: 'Montserrat', sans-serif;`: Variable para fuente principal.
+- `--fuente-secundaria: 'Arial', sans-serif;`: Variable para fuente secundaria.
+
+- `font-family`: Propiedad para definir la fuente.
+- `line-height`: Altura de línea del texto.
+- `color`: Color del texto.
+- `background-color`: Color de fondo.
+- `margin`: Márgenes.
+- `padding`: Relleno interno.
+- `display`: Tipo de display (flex, etc.).
+- `justify-content`: Alineación en flexbox.
+- `gap`: Espacio entre elementos en flexbox.
+- `position`: Posicionamiento (sticky, etc.).
+- `top`: Posición desde arriba.
+- `z-index`: Índice Z para capas.
+- `box-shadow`: Sombra de caja.
+- `text-decoration`: Decoración de texto.
+- `font-weight`: Peso de la fuente.
+- `border-radius`: Radio de borde.
+- `transition`: Transición de animaciones.
+- `max-width`: Ancho máximo.
+- `border-bottom`: Borde inferior.
+
 - `<li>...</li>`: Elemento de la lista.
 
 - `<table>...</table>`: Seccion correspondiente a una tabla.

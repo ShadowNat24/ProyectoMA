@@ -1,10 +1,28 @@
 :root {
   --gris-plata: #c0c0c0;
+  --gris-claro: #e0e0e0;
+  --gris-medio: #a0a0a0;
+  --gris-oscuro: #808080;
   --amarillo-vial: #eeb906;
+  --amarillo-claro: #f4e87c;
+  --amarillo-oscuro: #d4a306;
   --azul-oscuro: #4e5b64;
   --azul-profundo: #47606f;
+  --azul-medio: #6b7b8c;
+  --azul-claro: #8fa1b3;
   --blanco-sucio: #f4f4f4;
+  --blanco-puro: #ffffff;
+  --negro: #000000;
+  --rojo: #ff0000;
+  --rojo-claro: #ff6666;
+  --verde: #00ff00;
+  --verde-claro: #66ff66;
+  --naranja: #ff8000;
+  --naranja-claro: #ffb366;
+  --morado: #8000ff;
+  --morado-claro: #b366ff;
   --fuente-principal: 'Montserrat', sans-serif;
+  --fuente-secundaria: 'Arial', sans-serif;
 }
 
 body {
