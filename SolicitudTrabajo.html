@@ -7,55 +7,73 @@
         body { font-family: sans-serif; margin: 30px; }
         .error { color: red; display: none; font-weight: bold; }
     </style>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">  
 </head>
 <body>
 
-    <h1>Trabaja con Nosotros</h1>
-    <p>Si quieres trabajar con nosotros completa el formulario.</p>
+    <header>
+        <div id="logo-container">
+            <img src="assets/img/elvis.jpg" alt="Logo Todo en Blanco" width="150">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="Nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="consultas.html">Contáctanos</a></li>
+                <li><a href="SolicitudTrabajo.html">Trabaja con nosotros</a></li>
+                <li><a href="login.html">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
 
-    <form id="formTrabajo">
+    <main>
+        <h1>Trabaja con Nosotros</h1>
         
-        <label>Email:</label><br>
-        <input type="email" placeholder="Tucorreoelectronico@gmail.com" required><br><br>
+        <section id="requisitos">
+            <h3>Requisitos para postularse:</h3>
+            <p>Para formar parte de nuestro equipo, solicitamos los siguientes requisitos mínimos:</p>
+            <ul>
+                <li>• Ser mayor de edad (18 años o más).</li>
+                <li>• Estudios secundarios o técnicos completos (Liceo / UTU).</li>
+                <li>• Contar con referencias comprobables en el currículum.</li>
+            </ul>
+        </section>
 
-        <label>Cuéntanos sobre ti:</label><br>
-        <textarea rows="8" cols="50" placeholder="Pon tu nombre y apellido y por qué querrías trabajar en la empresa" required></textarea><br><br>
+        <section id="formulario-empleo">
+            <p>Completa el siguiente formulario para enviarnos tu postulación. El archivo debe estar en formato PDF.</p>
 
-        <label>Adjuntar currículum (PDF):</label><br>
-        <input type="file" accept=".pdf" required><br><br>
+            <form id="formTrabajo" action="mailto:cvtodoenblanco@gmail.com?subject=Solicitud de Trabajo" method="post" enctype="multipart/form-data">
+                
+                <label for="email">Tu correo electrónico:</label><br>
+                <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com" required><br><br>
 
-        <input type="checkbox" id="contacto" required>
-        <label for="contacto">Acepto ser contactado por la empresa</label><br><br>
+                <label for="bio">Cuéntanos sobre ti (Nombre, apellido y experiencia):</label><br>
+                <textarea id="bio" name="descripcion" rows="6" placeholder="Escribe aquí..." required></textarea><br><br>
 
-        <p id="mensajeError" class="error">Tienes que completar todos los campos para enviar</p>
+                <label for="cv">Adjuntar currículum (Solo PDF):</label><br>
+                <input type="file" id="cv" name="curriculum" accept=".pdf" required><br><br>
 
-        <button type="submit">Enviar</button>
+                <input type="checkbox" id="terminos" required>
+                <label for="terminos">Acepto que mis datos sean procesados para la selección de personal.</label><br><br>
 
-    </form>
-
-    <br>
-    <a href="index.html">Volver a la página principal</a>
+                <button type="submit" id="btnEnviar">Enviar Postulación</button>
+            </form>
+        </section>
+    </main>
 
     <script>
         const form = document.getElementById('formTrabajo');
-        const mensajeError = document.getElementById('mensajeError');
 
         form.addEventListener('submit', function(event) {
-            if (!form.checkValidity()) {
-                event.preventDefault(); // Bloquea el envío si está vacío
-                mensajeError.style.display = 'block';
-            } else {
-                mensajeError.style.display = 'none';
-                alert('Formulario enviado con éxito');
-            }
-        });
-
-        // Oculta el error mientras el usuario completa lo que falta
-        form.addEventListener('input', () => {
-            if (form.checkValidity()) {
-                mensajeError.style.display = 'none';
-            }
+            // Mostramos la alerta que pidió Elvis
+            alert('¡Formulario enviado con éxito! Gracias por tu interés en Todo en Blanco.');
+            
+            // Esperamos un segundo para que el mailto se procese y volvemos al inicio
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 1000);
         });
     </script>
 

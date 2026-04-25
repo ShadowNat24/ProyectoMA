@@ -1,23 +1,30 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión - Todo en Blanco</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
+    <main style="max-width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; text-align: center;">
         <h2>Iniciar Sesión</h2>
         <form action="bienvenido.html" id="formLogin">
             <label>Cédula (sin puntos ni guiones):</label><br>
-            <input type="number" name="cedula" min="1000000" placeholder="Ej: 12345678" required><br><br>
+            <input type="number" name="cedula" min="1000000" placeholder="Ej: 12345678" style="width: 80%; padding: 8px;" required><br><br>
 
             <label>Contraseña:</label><br>
-            <input type="password" id="pass" name="password" minlength="8" required>
-            <button type="button" onclick="mostrarPass()">👁️</button><br><br>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 5px; margin-left: 35px;">
+                <input type="password" id="pass" name="password" minlength="8" style="width: 70%; padding: 8px;" required>
+                <button type="button" onclick="mostrarPass()" style="padding: 8px; cursor: pointer;">👁️</button>
+            </div>
+            <br>
 
-            <button type="submit">Ingresar</button>
+            <button type="submit" style="width: 85%; padding: 10px; background-color: #47606f; color: white; border: none; border-radius: 5px; cursor: pointer;">Ingresar</button>
         </form>
+
+        <hr style="margin: 20px 0;">
+
+        <a href="index.html" style="text-decoration: none; color: #666; font-size: 0.9em; display: inline-block; padding: 10px; border: 1px solid #ccc; border-radius: 5px; width: 80%;">Volver al Inicio</a>
     </main>
 
     <script>
