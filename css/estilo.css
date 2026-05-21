@@ -368,6 +368,188 @@ main > section {
   margin: 1.5rem 0;
 }
 
+/* ===== ESTILOS RESPONSIVE MÓVIL (< 480px) ===== */
+
+/* Checkbox oculto para toggle del menú */
+.menu-toggle {
+  display: none;
+}
+
+/* Botón hamburguesa oculto por defecto */
+.menu-button {
+  display: none;
+  cursor: pointer;
+  color: black;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+}
+
+/* Botón ir al inicio oculto por defecto */
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--amarillo-vial);
+  color: var(--azul-profundo);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  z-index: 998;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: var(--azul-profundo);
+  color: var(--amarillo-vial);
+  transform: translateY(-5px);
+}
+
+/* Media Query para móvil (ancho menor a 480px) */
+@media (max-width: 480px) {
+  /* Mostrar botón hamburguesa */
+  .menu-button {
+    display: block;
+  }
+
+  /* Mostrar botón ir al inicio */
+  .scroll-to-top {
+    display: flex;
+  }
+
+  /* Header con flexbox para acomodar logo y menú toggle */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  /* Logo más pequeño */
+  #logo-container img {
+    width: 80px !important;
+  }
+
+  /* Navegación como menú desplegable */
+  nav {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background-color: var(--azul-profundo);
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  /* Mostrar navegación cuando checkbox está checked */
+  #menu-toggle:checked ~ nav {
+    max-height: 500px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: var(--amarillo-vial);
+    color: var(--azul-profundo);
+  }
+
+  /* Ajustar secciones para móvil */
+  section {
+    padding: 30px 15px;
+    max-width: 100%;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* Ajustar tabla para móvil */
+  table {
+    font-size: 0.85rem;
+  }
+
+  table th, table td {
+    padding: 8px;
+  }
+
+  /* Ajustar formularios */
+  form {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  input, textarea, select {
+    font-size: 16px; /* Previene zoom en iOS */
+  }
+
+  /* Ajustar testimonios */
+  #testimonios {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  #testimonios article {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  /* Ocultar hr en móvil */
+  hr {
+    display: none;
+  }
+
+  /* Ajustar footer */
+  .footer {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Ajustar productos */
+  #productos ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #productos li {
+    margin-bottom: 1rem;
+  }
+}
+
 .back-link {
   text-decoration: none;
   color: #666;
@@ -384,13 +566,4 @@ main > section {
   background-color: var(--amarillo-vial);
   color: var(--azul-profundo);
   border-color: var(--amarillo-vial);
-main h1, 
-main h2 {
-  text-align: center;
-}
-
-form {
-  max-width: 600px;
-  margin: 20px auto;
-}
 }
