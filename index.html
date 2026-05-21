@@ -29,7 +29,7 @@
     <main>
         <p>"Calidad que se nota"</p>
         <h2>Porque deberia elegirnos?</h2>
-        <p>Brindamos soluciones comerciales eficientes y confiables en la compra y distribución de la mercadería al por mayor, offering productos de calidad y un trato profesional para satisfacer las necesidades del nuestros clientes.</p>
+        <p>Brindamos soluciones comerciales eficientes y confiables en la compra y distribución de la mercadería al por mayor, ofreciendo productos de calidad y un trato profesional para satisfacer las necesidades del nuestros clientes.</p>
         
         <section id="productos">
             <ul>
@@ -95,18 +95,23 @@
                     
                     <form id="formAlta">
                         <div class="grupo-campo">
-                            <label for="nombre">Nombre Completo:</label>
+                            <label for="cedula">Cédula de Identidad:</label>
+                            <input type="text" id="cedula" placeholder="Ej: 1.234.567-8" required>
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="nombre">Nombre:</label>
                             <input type="text" id="nombre" required>
                         </div>
-                        
+
                         <div class="grupo-campo">
-                            <label for="email">Correo Electrónico:</label>
-                            <input type="email" id="email" required>
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" required>
                         </div>
                         
                         <div class="grupo-campo">
-                            <label for="rol">Rol / Cargo:</label>
-                            <input type="text" id="rol" required>
+                            <label for="cargo">Cargo:</label>
+                            <input type="text" id="cargo" required>
                         </div>
                         
                         <button type="submit" class="btn-guardar">Guardar Usuario</button>
@@ -133,7 +138,14 @@
 
         document.getElementById("formAlta").addEventListener("submit", function (e) {
             e.preventDefault();
-            alert("Usuario guardado con éxito (Simulado)");
+            
+            const ci = document.getElementById("cedula").value;
+            const nom = document.getElementById("nombre").value;
+            const ape = document.getElementById("apellido").value;
+            const car = document.getElementById("cargo").value;
+
+            alert(`Usuario Registrado:\nCI: ${ci}\nNombre: ${nom} ${ape}\nCargo: ${car}`);
+            
             document.querySelector(".formularioAltaUsuario").style.display = "none";
             this.reset();
         });
