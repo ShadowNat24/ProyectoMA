@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Todo en Blanco</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="login-page">
+    <main class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="bienvenido.html" id="formLogin" class="login-form">
+            <label>Cédula (sin puntos ni guiones):</label>
+            <input type="number" name="cedula" min="1000000" placeholder="Ej: 12345678" required>
+
+            <label>Contraseña:</label>
+            <div class="password-container">
+                <input type="password" id="pass" name="password" minlength="8" required>
+                <button type="button" onclick="mostrarPass()" class="eye-button">👁️</button>
+            </div>
+
+            <button type="submit" class="login-submit">Ingresar</button>
+        </form>
+
+        <hr>
+
+        <a href="index.html" class="back-link">Volver al Inicio</a>
+    </main>
+
+    <script>
+        function mostrarPass() {
+            var x = document.getElementById("pass");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

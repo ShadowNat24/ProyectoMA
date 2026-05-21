@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración - Todo en Blanco</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <main>
+        <h1>Panel de Gestión de Empleados</h1>
+        <p>Bienvenido, administrador. Aquí puede gestionar el personal activo.</p>
+
+        <table border="1" style="width:100%; text-align: left; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #4e5b64; color: white;">
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Cargo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.890.432-1</td>
+                    <td>Elvis</td>
+                    <td>Rodríguez</td>
+                    <td>Logística / Dueño</td>
+                    <td>
+                        <button onclick="alert('Modificando...')">Modificar</button>
+                        <button onclick="confirm('¿Eliminar empleado?')">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4.567.890-2</td>
+                    <td>Pancho</td>
+                    <td>García</td>
+                    <td>Ventas Mayoristas</td>
+                    <td>
+                        <button onclick="alert('Modificando...')">Modificar</button>
+                        <button onclick="confirm('¿Eliminar empleado?')">Borrar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Botón ir al inicio -->
+    <a href="index.html" id="scroll-to-top" class="scroll-to-top" title="Ir al inicio">↑</a>
+
+</body>
+</html>

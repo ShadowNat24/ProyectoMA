@@ -2,35 +2,82 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Contáctanos - Logística Rivera</title> <link rel="stylesheet" href="css/estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Todo en Blanco</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
-    <h1>Contáctanos</h1>
+    <header>
+        <div id="logo-container">
+            <img src="assets/img/elvis.jpg" alt="Logo Todo en Blanco" width="150">
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-button">☰</label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="Nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="consultas.html">Contáctanos</a></li>
+                <li><a href="SolicitudTrabajo.html">Trabaja con nosotros</a></li>
+                <li><a href="login.html">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="medios-contacto">
-        <h3>Nuestros Medios</h3>
-        <p><strong>Teléfono:</strong> 099 123 456</p>
-        <p><strong>Email:</strong> contacto@todoblanco.com</p>
-        <p><strong>Redes:</strong> @LogisticaRivera</p>
+    <main>
+        <section>
+            <h1>Contáctanos</h1>
+            <p>Para una atención más rápida, puedes comunicarte por nuestros canales directos:</p>
+            
+            <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid var(--amarillo-vial);">
+                <p><strong>Teléfono fijo:</strong> 4567 7373</p>
+                <p><strong>WhatsApp:</strong> +598 9532 4444</p>
+                <p><strong>Email:</strong> todoenblanco@gmail.com</p>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="index.html">
+                <button>Volver al inicio</button>
+            </a>
+        </div>
+
+        <section id="formulario-seccion">
+            <h2>Envíanos tu consulta</h2>
+        <form id="formConsulta" action="mailto:todoenblanco@gmail.com?subject=Consulta" method="post" enctype="text/plain">
+    <section>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí" required>
     </section>
 
-    <hr> <section id="seccion-formulario">
-        <p>Envíanos tu consulta y te responderemos a la brevedad:</p>
-
-        <form id="form-consulta">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" required><br><br>
-
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="mensaje">Consulta:</label><br>
-            <textarea id="mensaje" name="mensaje" rows="4" cols="30"></textarea><br><br>
-
-            <button type="submit" id="btn-enviar">Enviar</button>
-        </form>
+    <section>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="6" placeholder="¿En qué podemos ayudarte?" required></textarea>
     </section>
 
+    <button type="submit">Enviar</button>
+</form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Todo en Blanco - Gestión Logística</p>
+    </footer>
+
+    <!-- Botón ir al inicio -->
+    <a href="#logo-container" id="scroll-to-top" class="scroll-to-top" title="Ir al inicio">↑</a>
+
+    <script>
+        // Alerta de éxito y redirección al inicio
+        document.getElementById('formConsulta').onsubmit = function() {
+            alert('¡Consulta enviada con éxito! Gracias por comunicarte.');
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 500);
+        };
+    </script>
 </body>
 </html>
