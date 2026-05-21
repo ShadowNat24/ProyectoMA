@@ -27,7 +27,7 @@
         <a href="index.html" class="back-link">Volver al Inicio</a>
     </main>
 
-    <script>
+  <script>
         function mostrarPass() {
             var x = document.getElementById("pass");
             if (x.type === "password") {
@@ -36,6 +36,10 @@
                 x.type = "password";
             }
         }
+
+        document.getElementById("btnCerrarAltaUsuario").addEventListener("click", function () {
+            document.querySelector(".formularioAltaUsuario").style.display = "none";
+        });
     </script>
 </body>
 </html>
