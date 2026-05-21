@@ -195,7 +195,6 @@ main > section {
   margin-top: 40px;
 }
 
-/* Estilos para testimonios */
 #testimonios {
   padding: 60px 20px;
   max-width: 1200px;
@@ -284,7 +283,6 @@ main > section {
   align-self: flex-end;
 }
 
-/* Estilos para página de Login */
 .login-page {
   height: 100vh;
   display: flex;
@@ -368,14 +366,10 @@ main > section {
   margin: 1.5rem 0;
 }
 
-/* ===== ESTILOS RESPONSIVE MÓVIL (< 480px) ===== */
-
-/* Checkbox oculto para toggle del menú */
 .menu-toggle {
   display: none;
 }
 
-/* Botón hamburguesa oculto por defecto */
 .menu-button {
   display: none;
   cursor: pointer;
@@ -386,7 +380,6 @@ main > section {
   border: none;
 }
 
-/* Botón ir al inicio oculto por defecto */
 .scroll-to-top {
   display: none;
   position: fixed;
@@ -413,19 +406,15 @@ main > section {
   transform: translateY(-5px);
 }
 
-/* Media Query para móvil (ancho menor a 480px) */
 @media (max-width: 480px) {
-  /* Mostrar botón hamburguesa */
   .menu-button {
     display: block;
   }
 
-  /* Mostrar botón ir al inicio */
   .scroll-to-top {
     display: flex;
   }
 
-  /* Header con flexbox para acomodar logo y menú toggle */
   header {
     display: flex;
     justify-content: space-between;
@@ -433,12 +422,10 @@ main > section {
     padding: 0 1rem;
   }
 
-  /* Logo más pequeño */
   #logo-container img {
     width: 80px !important;
   }
 
-  /* Navegación como menú desplegable */
   nav {
     position: fixed;
     top: 100px;
@@ -454,7 +441,6 @@ main > section {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
-  /* Mostrar navegación cuando checkbox está checked */
   #menu-toggle:checked ~ nav {
     max-height: 500px;
   }
@@ -484,7 +470,6 @@ main > section {
     color: var(--azul-profundo);
   }
 
-  /* Ajustar secciones para móvil */
   section {
     padding: 30px 15px;
     max-width: 100%;
@@ -498,7 +483,6 @@ main > section {
     font-size: 0.95rem;
   }
 
-  /* Ajustar tabla para móvil */
   table {
     font-size: 0.85rem;
   }
@@ -507,17 +491,15 @@ main > section {
     padding: 8px;
   }
 
-  /* Ajustar formularios */
   form {
     padding: 20px;
     max-width: 100%;
   }
 
   input, textarea, select {
-    font-size: 16px; /* Previene zoom en iOS */
+    font-size: 16px;
   }
 
-  /* Ajustar testimonios */
   #testimonios {
     flex-direction: column;
     padding: 30px 15px;
@@ -528,18 +510,15 @@ main > section {
     min-width: unset;
   }
 
-  /* Ocultar hr en móvil */
   hr {
     display: none;
   }
 
-  /* Ajustar footer */
   .footer {
     padding: 20px;
     font-size: 0.9rem;
   }
 
-  /* Ajustar productos */
   #productos ul {
     display: flex;
     flex-direction: column;
@@ -567,76 +546,77 @@ main > section {
   color: var(--azul-profundo);
   border-color: var(--amarillo-vial);
 }
+
 .formularioAltaUsuario {
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: none; 
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none; 
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-contenido {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 450px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    position: relative;
-    box-sizing: border-box;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  box-sizing: border-box;
 }
 
 #btnCerrarAltaUsuario {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: #4a6572;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #4a6572;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grupo-campo {
-    margin-bottom: 20px;
-    text-align: left;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .grupo-campo label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
 }
 
 .grupo-campo input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
 
 .btn-guardar {
-    width: 100%;
-    padding: 12px;
-    background-color: #4a6572;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
+  width: 100%;
+  padding: 12px;
+  background-color: #4a6572;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
 }
