@@ -620,3 +620,21 @@ main > section {
   font-size: 16px;
   font-weight: bold;
 }
+.btn-modificar, .btn-baja {
+    background-color: #4e5b64;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 2px 0;
+    width: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.btn-baja:hover {
+    background-color: #eeb906;
+    color: black;
+}
