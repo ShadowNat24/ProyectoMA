@@ -83,42 +83,6 @@
                 </tbody>
             </table>
         </section>
-
-        <section class="seccion-administrador">
-            <button id="btnAltaUsuario">Alta Usuario</button>
-
-            <div class="formularioAltaUsuario">
-                <div class="modal-contenido">
-                    <button id="btnCerrarAltaUsuario">&times;</button>
-                    
-                    <h3>Registrar Nuevo Usuario</h3>
-                    
-                    <form id="formAlta">
-                        <div class="grupo-campo">
-                            <label for="cedula">Cédula de Identidad:</label>
-                            <input type="text" id="cedula" placeholder="Ej: 1.234.567-8" required>
-                        </div>
-
-                        <div class="grupo-campo">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" required>
-                        </div>
-
-                        <div class="grupo-campo">
-                            <label for="apellido">Apellido:</label>
-                            <input type="text" id="apellido" required>
-                        </div>
-                        
-                        <div class="grupo-campo">
-                            <label for="cargo">Cargo:</label>
-                            <input type="text" id="cargo" required>
-                        </div>
-                        
-                        <button type="submit" class="btn-guardar">Guardar Usuario</button>
-                    </form>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -126,29 +90,5 @@
     </footer>
 
     <a href="#logo-container" id="scroll-to-top" class="scroll-to-top" title="Ir al inicio">↑</a>
-
-    <script>
-        document.getElementById("btnAltaUsuario").addEventListener("click", function () {
-            document.querySelector(".formularioAltaUsuario").style.display = "flex";
-        });
-
-        document.getElementById("btnCerrarAltaUsuario").addEventListener("click", function () {
-            document.querySelector(".formularioAltaUsuario").style.display = "none";
-        });
-
-        document.getElementById("formAlta").addEventListener("submit", function (e) {
-            e.preventDefault();
-            
-            const ci = document.getElementById("cedula").value;
-            const nom = document.getElementById("nombre").value;
-            const ape = document.getElementById("apellido").value;
-            const car = document.getElementById("cargo").value;
-
-            alert(`Usuario Registrado:\nCI: ${ci}\nNombre: ${nom} ${ape}\nCargo: ${car}`);
-            
-            document.querySelector(".formularioAltaUsuario").style.display = "none";
-            this.reset();
-        });
-    </script>
 </body>
 </html>
