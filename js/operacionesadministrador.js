@@ -28,7 +28,7 @@ document.getElementById("formAlta").addEventListener("submit", function (e) {
 });
 
 function agregarFilaTabla(objEmpleado) {
-    const tbody = document.getElementById("tabla-empleados");
+    const tbody = document.getElementById("tablaEmpleados"); 
     
     const fila = document.createElement("tr");
 
@@ -39,7 +39,7 @@ function agregarFilaTabla(objEmpleado) {
         <td>${objEmpleado.cargo}</td>
         <td>
             <button class="btn-modificar">Modificar</button>
-            <button class="btn-baja" style="background-color: #ff6666;">Baja</button>
+            <button class="btn-baja">Borrar</button>
         </td>
     `;
 
